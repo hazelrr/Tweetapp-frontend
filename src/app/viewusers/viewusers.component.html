@@ -1,0 +1,18 @@
+<div class="jumbotron">
+<div class="row card-columns" style=" padding-top: 30px; padding-right:30px;">
+    <div class="col-sm-3 mx-auto" *ngFor="let user of users">
+    <div class="container" >
+    <div class="card" style="width:250px;height:200px;margin-left:15px;text-align: center; border-style:groove; color:rgb(241, 232, 232);border-color:black; background-color: rgb(6, 62, 116);" >
+    
+   <h5 class="card-title" style="color: rgb(241, 231, 231);">{{user.firstName+" "+user.lastName}}</h5>
+    <i class='fas fa-user-circle' style='font-size:36px'></i>
+    <span style="font-size: medium; color:rgb(233, 222, 224);">&nbsp;{{user.emailAddress}}&nbsp;</span>
+    
+    <br/>
+    <br/>
+    <a routerLink="/viewusertweets/{{user.userId}}"  class=" btn btn-grad mx-au" style="color: rgb(218, 187, 187); font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"  >View Tweets</a>
+    </div>
+    </div>
+    </div>
+    </div>
+</div>

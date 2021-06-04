@@ -1,0 +1,41 @@
+
+   <div class="jumbotron">
+    <div class="container" style="object-position: center; padding-top: 60px; background-color:honeydew;" >
+    <div class="row"  >
+        <div class="span well" style="padding-bottom:0" >
+            <i class='fas fa-user-circle' style='font-size:36px'></i>
+            <ul style="font-family:Georgia, 'Times New Roman', Times, serif"><b>{{userDisplayName}}</b></ul>
+            <form name="form" >   
+            <div class="form-group"  style='align-content: center;'>
+                <textarea class="form-control " rows="5" maxlength="144" id="tweetMessage"   [(ngModel)]="tweetContent.tweetMessage" [ngModelOptions]="{standalone: true}"></textarea>
+                </div>            
+            <a class="btn btn-success pull-right" type="submit" (click)="posttweet()"><b>Send</b></a>
+        </form>
+        </div></div>
+    </div>
+<br/>
+    <h4 style="padding-left: 60px; color:midnightblue; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Check out your previous tweets!!</h4>
+    <br/>
+    <div class="container" style="background: rgb(154, 226, 226);">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card-group" >
+                
+                <div class="card p-4">
+                    <div class="card-body-right" style="align-items: initial; background-color:rgb(199, 235, 213);" >
+                        <div *ngFor="let tweet of tweetList">
+                        <i class='fas fa-user-circle' style='font-size:36px'></i>
+                        <ul>{{tweet.createdOn|date:'medium'}}</ul>
+                        <ul>{{tweet.tweetMessage}}</ul>
+                        <br>
+                        
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    
+ </div>
+</div>
+

@@ -1,0 +1,31 @@
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" style="color: white; font-family:fantasy, Helvetica, sans-serif; font-size: large; font-style:italic bold;">TweetApp</a>
+            <img class="logo" src="./assets/images/tweety.jpg" alt="Tweety" height=40 width=40>
+        </div>
+        <ul class="navbar-nav" >
+            <li><a href="#" *ngIf ="!(isLoggedIn |async)" routerLink="/register" style="color:white ;font-family:Cambria ;"><b>Sign Up</b></a></li>
+            <li><a href="#" *ngIf ="!(isLoggedIn |async)" routerLink="/login" style="color:white ;font-family:Cambria; font-style:normal bold; "><b>Sign In</b></a></li>
+          
+            <li><a href="#" *ngIf="isLoggedIn |async" routerLink="/welcome" style="color:white ;font-family:Cambria; font-style:normal bold; "><b>Home</b></a></li>   
+            <li><a href="#" *ngIf ="isLoggedIn |async" routerLink="/dashboard" style="color:white ;font-family:Cambria; font-style:normal bold; "><b>Dashboard</b></a></li>
+            <li><a href="#" *ngIf ="isLoggedIn |async" routerLink="/viewusers" style="color:white ;font-family:Cambria; font-style:normal bold; "><b>View Users</b></a></li>
+            <li><a href="#" *ngIf="isLoggedIn |async" routerLink="/viewtweets" style="color:white ;font-family:Cambria; font-style:normal bold; "><b>View All Tweets</b></a></li> 
+            <li  *ngIf="isLoggedIn |async" style="color:white;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{userDisplayName}}</li>
+        </ul>
+            
+             <button class="btn btn-success" (click)="onLogout()" *ngIf="isLoggedIn | async">Logout</button>
+                 
+
+    </div>
+</nav>
+
+<main [@routerAnimations]="prepareRoute(outlet)" class="content">
+    <router-outlet #outlet="outlet"></router-outlet> 
+</main>
+
+<!-- <router-outlet></router-outlet> -->
+
+

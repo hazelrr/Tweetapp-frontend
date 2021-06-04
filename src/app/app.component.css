@@ -1,0 +1,44 @@
+.navbar{
+    background-color:darkcyan;
+    overflow: hidden;   
+    /* position: fixed; */
+    top: 0;
+    width: 100%;
+    
+}
+
+.nav{
+    text-decoration-color: black;
+}
+.a{
+    text-decoration-color: black; 
+}
+.nav-brand
+{
+    color:white;
+}
+.navbar-nav
+{
+    display: inline-block;
+}
+li {
+    display: inline-block;
+    
+  }
+  
+li a {
+    display: block;
+    padding: 8px;
+    
+  }
+ul{
+    display: flex;
+  } 
+.logo {
+    height: 50px;
+    width: auto;
+    padding: 10px;
+    display: inline-block;
+    margin: 0 auto;
+    /* background:url('./assets/images/tweety.jpg') no-repeat center center; */
+}
